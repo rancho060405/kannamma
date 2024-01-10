@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="pps.css" />
+    <style>
+      #letterContent {
+        max-height: 400px; /* Set the maximum height for scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+    </style>
+    <script>
+      function openUp() {
+        const $opentop = document.querySelector("#opentop");
+        const $top = document.querySelector("#top");
+        const $front = document.querySelector("#front");
+        const $back = document.querySelector("#back");
+        const $letter = document.querySelector("#letter");
+        const $button = document.querySelector("button");
+
+        $opentop.beginElement();
+        $top.style.zIndex = 2;
+
+        $top.classList.add("animate");
+        $front.classList.add("animate");
+        $back.classList.add("animate");
+        $button.classList.add("animate");
+        $letter.classList.add("animate");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="text">
+      <h1>Hey ! Listen this is for you 💖....</h1>
+    </div>
+    <div id="envelope">
+      <div id="back">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="300"
+          width="300"
+        >
+          <polygon
+            points="0,100 300,100 300,300 0,300"
+            style="fill: #4a274a; stroke: none; stroke-width: 0"
+          />
+        </svg>
+      </div>
+      <div id="front">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="300"
+          width="300"
+        >
+          <polygon
+            points="0,100 150,200 300,100 300,300 0,300"
+            style="fill: #2abad0; stroke: #ffffff; stroke-width: 3"
+          />
+        </svg>
+      </div>
+      <div id="top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="300"
+          width="300"
+        >
+          <polygon
+            points="0,100 150,200 300,100"
+            style="fill: #2abad0; stroke: #ffffff; stroke-width: 2"
+          >
+            <animate
+              id="opentop"
+              attributeName="points"
+              dur="0.5s"
+              fill="freeze"
+              begin="indefinite"
+              from="0,100 150,200 300,100"
+              to="0,100 150,0 300,100"
+            />
+          </polygon>
+        </svg>
+      </div>
+
+      <div id="letter">
+        <div id="letterContent">
+          <h1>For My <span>Love</span></h1>
+          <p>
+            Nana,naku telusu nuv ntha overthink chesthavo and naku telusu, nen chesina panulaki ntha bada paduntavo, nuv nanu ela chusina nen undedi neetone
+            nana, nen neeto rude ga matladite tisukolev ani telusu but edo ala automatic ga ayipoindi nana, nuv awnu ana kadana i will be like this
+            and shower my feelings nana, nuv nanu frnd anukuntavo best friend anukuntavo ni istam nana, there would be no change fro me except calling as 
+              Nana or Kannamma, meeru exams lo meeru petukuna target reach avutaru meeru prashantanga chadavandi, if you need any kind of help, i will be there
+              feb 7th naku exam undi nana ( sad life), exams are important e time lo meeru ekuva stress tisukokandi nana exam di, stress emaina unte nanu full ga vesukondi
+              nen ade chesevadini nana chinnapudu, 
+              Dini taruwatadi kuda chesa nana ide chala time patindi but meeru ipudu chudadu, tata and all the very best for Exams  <!-- Your long letter content goes here -->
+          </p>
+        </div>
+        <a href="pps2.html">Click Here</a>
+      </div>
+      <button onclick="openUp()">Click Here</button>
+    </div>
+  </body>
+</html>
